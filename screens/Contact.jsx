@@ -1,11 +1,14 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import Boton from "../components/Boton";
 
-export default function Contact() {
+export default function Contact({ setView }) {
   return (
     <>
       <View style={styles.contact}>
         <Text>Contact</Text>
+        <Boton text="Ir a Home" clic={() => setView("Home")} />
+        <Boton text="Ir a About" clic={() => setView("About")} />
       </View>
     </>
   );

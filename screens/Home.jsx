@@ -2,15 +2,12 @@ import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import Boton from "../components/Boton";
 
-export default function Home({ navigation }) {
+export default function Home({ setView }) {
   return (
     <>
       <View style={styles.home}>
-        <Boton text="Ir a About" clic={() => navigation.navigate("About")} />
-        <Boton
-          text="Ir a Contact"
-          clic={() => navigation.navigate("Contact")}
-        />
+        <Boton text="Ir a About" clic={() => setView("About")} />
+        <Boton text="Ir a Contact" clic={() => setView("Contact")} />
         <Text style={styles.text}>Home</Text>
       </View>
     </>
